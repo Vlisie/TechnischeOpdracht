@@ -10,39 +10,41 @@ public class Starthok {
 	Toerschaatser jaap = new Toerschaatser("Jaap", 27);
 	Toerschaatser kees = new Toerschaatser("Kees", 67);
 	Toerschaatser karla = new Toerschaatser("Karla", 47);
-	Cameraman mart = new Cameraman(5);
+	Cameraman mart = new Cameraman(15,69);
 	
-	
-int starten(int nWedstrijdschaatsers, int nToerschaatsers){
+		
+String starten() throws Exception{
 	System.out.println("Welkom bij de Elfstedentocht.");
-	System.out.println("U kunt kiezen wat er gaat gebeuren.\nToets a om de uitzending te starten.\nToets s om het startschot te geven en de tijd te laten lopen.\nToets d om informatie over een schaatser op te vragen.\nToets f om de tocht te verlaten.\nVoer in:");
+	System.out.println("U kunt kiezen wat er gaat gebeuren.\nToets a om de uitzending te starten.\nToets s om te kijken in welke stad de schaatsers zich bevinden\nToets d om informatie over een schaatser op te vragen.\nToets f om de tocht te verlaten.\nVoer in:");
+	boolean lekkerdoorgaan = true;
+	while(lekkerdoorgaan == true) {
 	char c = sc.next().charAt(0);
 	switch(c) {
 			case 'a':
-				startUitzending();
+				mart.startUitzending();
+				System.out.println("De uitzending is bezig");
+				break;
 			case 's':
-				tijdLatenLopen();
+				System.out.println("Toets een getal om te zien waar de schaatsers zich bevinden.");
+				int x = sc.nextInt();
+				if(x>10) {
+					throw new nietbekendException();}
+				System.out.println("De elfstedentocht is van start gegaan.\nWe zijn onderweg naar "+ Route.elfsteden[x]);
 			case 'd':
-			
+				break;
 			case 'f':	
-	
-	
-	
-	
-	
+				System.out.println("U verlaat de Elfstedentocht tot over 30 jaar (hopelijk)");
+				lekkerdoorgaan = false;
+				break;
+			default:
+				System.out.println("foute input");			
 	}
-	startUitzending();
-	int nTotaalschaatsers = nWedstrijdschaatsers + nToerschaatsers; 
-	return nTotaalschaatsers;
+	}
+	return "gestart";
 }
 
-void startUitzending() {
-	
-}
-void tijdLatenLopen() {
-	
-}
 void welkeSchaatser() {
 	
 }
 }
+class nietbekendException extends Exception{}

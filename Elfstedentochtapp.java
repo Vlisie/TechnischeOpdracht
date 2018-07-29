@@ -1,8 +1,12 @@
 package elfstedentocht;
 
 public class Elfstedentochtapp {
-	public static void main(String[] args){
+	public static void main(String[] args) throws Exception{
 		Starthok starthok = new Starthok();
-		starthok.starten(85,1500);
+		try {
+		starthok.starten();
+		}catch(nietbekendException e) {
+			System.out.println("Deze stad bestaat niet");
+		}
 	}
 }
