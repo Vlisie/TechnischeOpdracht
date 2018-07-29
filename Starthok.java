@@ -15,7 +15,7 @@ public class Starthok {
 		
 String starten() throws Exception{
 	System.out.println("Welkom bij de Elfstedentocht.");
-	System.out.println("U kunt kiezen wat er gaat gebeuren.\nToets a om de uitzending te starten.\nToets s om te kijken in welke stad de schaatsers zich bevinden\nToets d om informatie over een schaatser op te vragen.\nToets f om de tocht te verlaten.\nVoer in:");
+	System.out.println("U kunt kiezen wat er gaat gebeuren.\nToets a om de uitzending te starten.\nToets s om te kijken in welke stad de schaatsers zich bevinden\nToets d om te kijken of de schaatser niet ouder is dan 40.\nToets f om de tocht te verlaten.\nVoer in:");
 	boolean lekkerdoorgaan = true;
 	while(lekkerdoorgaan == true) {
 	char c = sc.next().charAt(0);
