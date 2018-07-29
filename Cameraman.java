@@ -6,7 +6,8 @@ public class Cameraman implements KrijgtSalaris{
 	void startUitzending() {
 		System.out.println("De uitzending over de elfstedentocht is begonnen.");
 	}
-	KrijgtSalaris salarisinnen() {
+	int salarisinnen(int n) {
+		int hoeveelheid = n;
 		return hoeveelheid;
 	}
 }
